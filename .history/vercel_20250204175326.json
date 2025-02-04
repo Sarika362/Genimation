@@ -1,0 +1,24 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "client/package.json",
+        "use": "@vercel/react"
+      },
+      {
+        "src": "server/index.js",  // The serverless function handling the backend API
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",  // Routes API requests to the backend
+        "dest": "/server/index.js"
+      },
+      {
+        "src": "/(.*)",  // Routes all other requests to the React source files
+        "dest": "/client/$1"
+      }
+    ]
+  }
+  

@@ -1,0 +1,102 @@
+/* Center the dynamic component on the screen */
+.dynamic-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgba(37, 37, 38, 0.1);
+  transition: background-color 0.5s ease;
+  row-gap: 60px;
+  padding-top: 80px; /* Adjust this to give space from the navbar */
+}
+
+/* Container for the video output */
+.output-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px; /* Space between video and download button */
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Style for the video element */
+.output-section video {
+  max-width: 90%; /* Makes the video responsive */
+  max-height: 60vh; /* Limits the video height to 60% of the viewport */
+  border-radius: 15px; /* Optional: adds rounded corners to the video */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Optional: adds a shadow to the video */
+}
+
+/* Centering and styling of the download button */
+.button.download {
+  background-color: #17a2b8; /* Blue background */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.button.download:hover {
+  background-color: #138496; /* Darker blue on hover */
+}
+
+/* Styling for the input section */
+.input-section.genimation {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 50px;
+  background-color: rgba(97, 94, 94, 0.1); /* Slightly transparent background */
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Aligns content to the top when it wraps */
+  border-radius: 60px;
+  flex-wrap: wrap; /* Allows content to wrap to the next line */
+  border: none;
+}
+
+/* Styling for the prompt input */
+.prompt {
+  background: transparent;
+  color: #f0f0f0;
+  padding-left: 5% !important;
+  margin-top: 25px;
+  border: none;
+  flex: 1; /* Allows input to take the remaining space */
+  margin-right: 10px; /* Spacing between input and button */
+  min-width: 0; /* Prevents input from shrinking to zero width */
+}
+
+.prompt::placeholder {
+  background: transparent;
+  color: #f0f0f0;
+}
+
+.prompt:focus {
+  outline: none;
+}
+
+/* Styling for the generate button */
+.button.generate {
+  background-color: transparent !important;
+  color: #f0f0f0;
+  text-shadow: 0px 1px 2px #f0f0f0;
+  margin-top: 5px;
+  cursor: pointer;
+  align-self: flex-start; /* Ensures button stays aligned at the top */
+}
+
+/* Styling for the video icon */
+.bx.bxs-video {
+  font-size: 300px; /* Increased size */
+  color: #f0f0f0; /* Set the icon color */
+  display: inline-block;
+  background-color: transparent;
+}

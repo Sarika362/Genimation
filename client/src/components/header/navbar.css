@@ -1,0 +1,153 @@
+/* Header styling */
+.navbar {
+    width: 100%; /* Full width of the viewport */
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Align to the left of the viewport */
+    z-index: var(--z-fixed); /* High z-index to ensure it stays above other elements */
+    background: hsla(0, 0%, 100%, 0.1); /* Transparent background */
+    backdrop-filter: blur(20px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(20px); /* Safari support */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06); /* Subtle border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */}
+
+/* Navigation bar styling */
+.nav {
+    height: calc(var(--header-height) + 2rem); /* Height of the navigation bar */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    column-gap: 1rem; /* Space between columns */
+}
+
+/* Styling for logo and toggle button */
+.nav_logo,
+.nav_toggle {
+color: var(--title-color); /* Text color from CSS variable */
+font-weight: var(--font-medium); /* Font weight from CSS variable */
+}
+
+/* Navigation list styling */
+.nav_list {
+display: flex; /* Flexbox for layout */
+column-gap: 2rem; /* Space between list items */
+}
+
+/* Navigation link styling */
+.nav_link {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    font-size: var(--normal-font-size); /* Font size from CSS variable */
+    color: var(--title-color); /* Text color from CSS variable */
+    font-weight: var(--font-medium); /* Font weight from CSS variable */
+    transition: 0.3s; /* Smooth transition effect */
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+/* Icons and close button styling (hidden by default) */
+.nav_icon,
+.nav_close,
+.nav_toggle {
+    display: none; /* Hide elements */
+}
+
+/* Active link and hover effect */
+.active-link,
+.nav_link:hover {
+    color: var(--title-color-dark); /* Darker color for active or hovered links */
+    text-decoration: none;
+}
+
+
+/* Responsive design for screens up to 768px */
+@media screen and (max-width: 768px) {
+.navbar {
+    top: initial; /* Reset top position */
+    bottom: 0; /* Align header to the bottom of the viewport */
+    backdrop-filter: initial !important;
+    -webkit-backdrop-filter: initial;
+}
+.nav {
+    height: var(--header-height); /* Adjust height */}
+
+/* Navigation menu styling for mobile */
+.nav_menu {
+    position: fixed; /* Fixed position to overlay the viewport */
+    bottom: -100%; /* Initially hide menu off-screen */
+    left: 0; /* Align to the left of the viewport */
+    width: 100%; /* Full width of the viewport */
+    padding: 2rem 1.5rem 4rem; /* Padding inside the menu */
+    border-radius: 1.5rem 1.5rem 0 0; /* Rounded top corners */
+    transition: all 0.3s ease-out 0s !important;
+    background-color: transparent !important;
+    box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px);  /* Safari support */
+    transition: 0.3s; /* Smooth transition effect */
+    flex: 1
+}
+
+.nav_link {
+    font-size: var(--h3-font-size) !important;
+    font-weight: 900 !important;
+}
+
+/* Show menu when active */
+.show-menu {
+    bottom: 0; /* Move menu into view */
+}
+
+.nav_list {
+    display: grid; /* Grid layout for mobile */
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 2rem; /* Gap between grid items */
+}
+
+/* Icon styling */
+.nav_icon {
+    font-size: 1.2rem; /* Icon font size */
+}
+
+/* Close button styling */
+.nav_close {
+    position: absolute; /* Absolute positioning */
+    bottom: 0.4rem; /* Position close button near the bottom */
+    right: 1.3rem; /* Position close button near the right edge */
+    font-size: 1.5rem; /* Font size for the close button */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: var(--title-color); /* Text color from CSS variable */
+}
+
+/* Hover effect for close button */
+.nav_close:hover {
+    color: var(--title-color-dark); /* Darker color on hover */
+}
+
+/* Toggle button styling */
+.nav_toggle {
+    font-size: 1.1rem; /* Font size for the toggle button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Show icons and buttons on mobile */
+.nav_icon,
+.nav_close,
+.nav_toggle {
+    display: block; /* Display icons and buttons */
+}
+}
+
+/* Responsive design for very small screens (up to 350px) */
+@media screen and (max-width: 350px) {
+.nav_menu {
+    padding: 2rem 0.25rem 4rem; /* Adjust padding for very small screens */
+}
+.nav_icon {
+    font-size: 1.2rem; /* Adjust icon font size */
+}
+}

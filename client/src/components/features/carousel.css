@@ -1,0 +1,93 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 500px;
+  position: relative; /* Isolate slide content */
+  overflow: hidden; /* Prevent overflowing content */
+}
+
+.carousel-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Below text */
+}
+
+.carousel-text {
+  position: absolute;
+  z-index: 2; /* Above video */
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent; /* Semi-transparent background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.carousel-text h2 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-bold);
+  margin: 0;
+}
+
+.carousel-text p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Indicators */
+
+.carousel-indicators {
+    position: absolute; /* Make the indicators overlay the slides */
+    bottom: 20px; /* Adjust the distance from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Correct centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background */
+    padding: 5px 15px; /* Add padding for a pill-like look */
+    border-radius: 30px; /* Rounded corners for the container */
+}
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.indicator.active {
+    background-color: #555454e1;
+    width: 60px; /* Rectangle width */
+    height: 10px; /* Rectangle height */
+    border-radius: 20px; /* Rounded corners */
+    transform: scale(1); /* No extra scaling */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-slide {
+    height: 400px;
+  }
+}

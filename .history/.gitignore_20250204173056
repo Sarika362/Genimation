@@ -1,0 +1,29 @@
+.gitignore
+./client/env
+./client/node_modules/
+./server/env
+./server/node_modules/
+# Node modules (ignore dependencies)
+client/node_modules/
+api/node_modules/
+
+# Environment variables (keep secrets private)
+client/.env
+api/.env
+
+# Build files
+client/build/
+api/.next/
+api/.vercel/
+vercel/
+dist/
+out/
+
+# Logs and temporary files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+.vscode/
+.idea/
