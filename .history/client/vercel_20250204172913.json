@@ -1,9 +1,0 @@
-{
-    "rewrites": [
-      {
-        "source": "/api/(.*)",
-        "destination": "https://genimation-backend.vercel.app/api/$1"
-      }
-    ]
-  }
-  
