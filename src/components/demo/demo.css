@@ -1,0 +1,118 @@
+.demo.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.section__title.demo{
+    font-size: var(--big-font-size) !important;
+}
+
+.video-container {
+    position: relative;
+    background-color: #d9d9d9; /* Light gray background */
+    border-radius: 40px;
+    width: 100%;
+    max-width: 900px; /* Adjust the width */
+    height: 500px; /* Adjust the height */
+    margin: 0 auto; /* Center the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo-video {
+    width: 98%;
+    height: 97%;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.try {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.try:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.play-button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.play-button:hover {
+    font-size: 20px;
+}
+
+.play-button span {
+    font-size: 20px;
+    color: #000;
+}
+
+h2.try-genimation {
+    font-size: var(--h3-font-size);
+    font-weight: 500 !important;
+    color: rgba(0, 0, 0, 8);
+    text-align: center;
+}
+.try-genimation:hover {
+    color: #fff;
+}
+
+@media screen and (max-width: 992px) {
+    .section__title.demo{
+        font-size: var(--h1-font-size) !important;
+    }
+    .video-container {
+        width: 100%;
+        max-width: 750px; /* Adjust the width */
+        height: 550px; /* Adjust the height */
+        margin: 0 auto; /* Center the container */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section__title.demo{
+        font-size: var(--h1-font-size) !important;
+    }
+    .video-container {
+        width: 100%;
+        max-width: 600px; /* Adjust the width */
+        height: 450px; /* Adjust the height */
+        margin: 0 auto; /* Center the container */
+        margin-bottom: 80px;
+    }
+}
+

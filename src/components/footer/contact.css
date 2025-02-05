@@ -1,0 +1,199 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+    margin: 30px;
+    padding: 10px;
+    background: rgba(148, 148, 150, 0.1); /* Transparent background */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.creators {
+    display: flex;
+    column-gap: 15%;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__box {
+    background-color: #f2eeee;
+    height: 330px;
+    margin: 5px;
+    width: 450px;
+    padding: 25px;
+    border-radius: 40px;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 2px;
+}
+
+.avatar {
+    border-radius: 60px;
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    bottom: 0;
+}
+
+.creators.box{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem; /* Font size for icons */
+    text-align: center;
+    margin: 0;
+}
+
+.section__subtitle.contact {
+    color: var(--title-color-dark); /* Icon color from CSS variable */
+    padding: auto;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0%;
+}
+
+.section__title.creators {
+    color: var(--title-color); /* Icon color from CSS variable */
+    padding: auto;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: var(--h1-font-size)
+}
+
+/* Subtitle styling */
+.section__subtitle.creators {
+    color: #3f3f3f;
+    position: relative; /* Position relative for the ::before pseudo-element */
+    font-size: var(--h3-font-size); /* Font size from CSS variable */
+    padding-left: 3rem; /* Left padding */
+    font-weight: var(--font-normal); /* Font weight from CSS variable */
+    margin-bottom: var(--mb-2); /* Bottom margin */
+}
+
+/* Decoration for subtitle using ::before pseudo-element */
+.section__subtitle.creators::before {
+    content: ""; /* Empty content to create a line */
+    position: absolute; /* Absolute positioning relative to subtitle */
+    width: 40px; /* Line width */
+    height: 1.5px; /* Line height */
+    background-color: #3f3f3f; /* Line color from CSS variable */
+    left: 0; /* Position line at the left edge */
+    right: 5px; /* Position line at the right edge */
+    top: 1.5rem; /* Position line below the subtitle text */
+    margin-bottom: 2rem; /* Position line below the subtitle text */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.25rem;
+    margin-bottom: var(--mb-1);
+    margin-top: -15px;
+    height: 5px;
+    z-index: 1;
+}
+
+.bx.bxl-linkedin {
+    margin-top: 5px;
+    color: var(--title-color-dark); /* Icon color from CSS variable */
+}
+
+.portfolio {
+    color: var(--title-color-dark); /* Icon color from CSS variable */
+    margin-top: 5px;
+    margin: 0px;
+    padding-left: -10px;
+}
+
+@media screen and (max-width: 768px) {
+    .creators {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+    }
+
+    .contact__box {
+        max-width:300px;
+        height: 320px;
+        margin: 5px;
+    }
+
+    .creators.box{
+        font-size: 1.3rem; /* Font size for icons */
+        color: #000; /* Icon color from CSS variable */
+        padding: auto;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .section__subtitle.creators {
+        padding-left: 2.5rem; /* Left padding */
+    }
+
+    /* Decoration for subtitle using ::before pseudo-element */
+    .section__subtitle.creators::before {
+        content: ""; /* Empty content to create a line */
+        width: 35px; /* Line width */
+        top: 1.3rem; /* Position line below the subtitle text */
+        margin-bottom: 1px; /* Position line below the subtitle text */
+    }
+}
+
+
+@media screen and (max-width: 460px) {
+    .contact {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .creators {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+    }
+
+    .contact__box {
+        max-width:200px;
+        height: 300px;
+    }
+
+    .avatar {
+        border-radius: 60px;
+        width: 80px;
+        height: 80px;
+        bottom: 0;
+        margin: 0px;
+    }
+
+    .creators.box{
+        font-size: 1.3rem; /* Font size for icons */
+        color: #000; /* Icon color from CSS variable */
+        padding: 0px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .section__subtitle.creators {
+        padding-left: 2rem; /* Left padding */
+    }
+
+    /* Decoration for subtitle using ::before pseudo-element */
+    .section__subtitle.creators::before {
+        content: ""; /* Empty content to create a line */
+        width: 30px; /* Line width */
+        top: 1.3rem; /* Position line below the subtitle text */
+        margin-bottom: 1px; /* Position line below the subtitle text */
+    }
+
+    .portfolio {
+        margin-top: 1px;
+        margin: 0px;
+        padding-left: 0px !important;
+    }
+}

@@ -1,0 +1,25 @@
+.section__title.archives {
+    font-size: var(--big-font-size) !important;
+}
+.masonry-layout {
+    column-count: 3; /* Number of columns */
+    column-gap: 10px; /* Gap between columns */
+}
+
+.masonry-item {
+    break-inside: avoid; /* Prevent breaking inside the column */
+    margin-bottom: 6px; /* Add gap between rows */
+}
+
+.masonry-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: for rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: for subtle shadow */
+}
+
+@media screen and (max-width: 768px) {
+    .section__title.archives{
+        font-size: var(--h1-font-size) !important;
+    }
+}

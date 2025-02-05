@@ -1,0 +1,22 @@
+.features.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+    margin: 10px;
+}
+
+.section__title.features {
+    font-size: var(--big-font-size) !important;
+}
+
+@media screen and (max-width: 768px) {
+    .section__title.features {
+        font-size: var(--h1-font-size) !important;
+    }
+
+    .features.section {
+        margin-top: 50px;
+        margin-bottom: 160px;
+    }
+}
